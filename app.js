@@ -17,9 +17,9 @@ for (let i = 0; i < elements.length; i++) {
     const elButton = document.querySelector(`#${elements[i]}`);
     elButton.addEventListener('click', () => {
         player.textContent = elements[i];
-        computer.textContent = computerSelection();
-        let playerPlay = elements[i];
         let computerPlay = computerSelection();
+        computer.textContent = computerPlay;
+        let playerPlay = elements[i];
         decideWinner(playerPlay, computerPlay);
         updateCounter();
     })
@@ -35,13 +35,15 @@ function decideWinner(playerPlay, computerPlay) {
         case "waterfire":
         case "earthair":
         case "earthfire":
-            result.innerHTML = "You win the battle!";
+        case "waterearth":
+            result.innerHTML = "You win the battle!"
             break
         case "airfire":
         case "firewater":
         case "airearth":
         case "fireearth":
-            result.innerHTML = "You lost the battle!";
+        case "earthwater":
+            result.innerHTML = "You lost the battle!"
             break
         case "airair":
         case "firefire":
