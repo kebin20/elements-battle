@@ -15,12 +15,6 @@ A function for the computer to generate the random element choices was made, as 
 Then, a for loop statement was used to create the 4 element button, which shows the computer and player choice, as well as the results of the match is also displayed in this loop.
 
 
-Alternative:
-In this solution, instead of using document.createElement() with the append() methods, I created the elements and buttons beforehand and used querySelector().
-
-In order to layout the basic steps of the code, I first wrote every single event listener for each single element button and then refactored it to a for loop statement to make the code compact. The function for the computer making random choices, as well as deciding the win/lose conditions are similar to the ones stated in Solution 1. 
-
-
 Next step: 
 - Create a function for the counter element, so that everytime the player wins, the counter goes up by one, or if the computer wins, the computer counter goes up by one. 
 07/10/22 (COMPLETED)

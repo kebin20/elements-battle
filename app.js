@@ -1,3 +1,4 @@
+// ---FOR THE ELEMENTS BATTLE--
 const computer = document.querySelector("#computer")
 const player = document.querySelector("#player")
 const result = document.querySelector("#result")
@@ -5,6 +6,11 @@ const result = document.querySelector("#result")
 // ---FOR THE COUNTER---
 const pDisplay = document.querySelector("#playerDisplay")
 const cDisplay = document.querySelector("#compDisplay")
+
+// ---FOR THE ROUNDS AND RESET FUNCTION
+const resetButton = document.querySelector("#reset");
+const winScoreSelect = document.querySelector("#round");
+let winScore = 3;
 
 // GLOBAL VARIABLES
 const elements = ["fire", "water", "air", "earth"]
@@ -16,11 +22,11 @@ let computerScore = 0;
 for (let i = 0; i < elements.length; i++) {
     const elButton = document.querySelector(`#${elements[i]}`);
     elButton.addEventListener('click', () => {
-        player.textContent = elements[i];
-        let computerPlay = computerSelection();
-        computer.textContent = computerPlay;
         let playerPlay = elements[i];
+        let computerPlay = computerSelection();
         decideWinner(playerPlay, computerPlay);
+        player.textContent = elements[i];
+        computer.textContent = computerPlay;
         updateCounter();
     })
 };
@@ -63,6 +69,26 @@ function updateCounter() {
         cDisplay.textContent = computerScore;
     }
 }
+
+
+winScoreSelect.addEventListener('change', () => {
+    winScore = parseInt(this.value);
+})
+
+resetButton.addEventListener('click', reset);
+
+function reset() {
+    pDisplay.textContent = 0;
+    cDisplay.textContent = 0;
+    computer.textContent = "";
+    player.textContent = "";
+    result.textContent = "";
+}
+
+
+
+
+
 
 // -----ORIGINAL CODE------
 // const fire = document.querySelector("#fire");
