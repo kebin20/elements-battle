@@ -10,7 +10,7 @@ const cDisplay = document.querySelector("#compDisplay")
 // ---FOR THE ROUNDS AND RESET FUNCTION
 const resetButton = document.querySelector("#reset");
 const winScoreSelect = document.querySelector("#round");
-let winScore = 3;
+let winScore = 1;
 
 const select = document.querySelector("#round");
 
@@ -19,11 +19,13 @@ const elements = ["fire", "water", "air", "earth"]
 let playerScore = 0;
 let computerScore = 0;
 
+// VARIABLE THAT SELECTS ALL THE ELEMENT BUTTONS
 const elementButtons = elements.map(element => document.querySelector(`#${element}`));
 
 // -----REFACTORED CODE USING A FOR LOOP----
 // for (let i = 0; i < elements.length; i++) {
 //     const elButton = document.querySelector(`#${elements[i]}`);
+// ---USED forEach FUNCTION---
 elementButtons.forEach(elementButton =>
     elementButton.addEventListener('click', () => {
         // let playerPlay = elements[i];
@@ -83,12 +85,10 @@ function checkWin() {
     }
 }
 
+// ---USING e (EVENT) TARGETS THE SPECIFIC VALUE---
 winScoreSelect.addEventListener('change', (e) => {
-    console.log(e);
     winScore = parseInt(e.target.value);
 })
-
-
 
 
 resetButton.addEventListener('click', reset);
