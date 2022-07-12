@@ -12,24 +12,31 @@ const resetButton = document.querySelector("#reset");
 const winScoreSelect = document.querySelector("#round");
 let winScore = 3;
 
+const select = document.querySelector("#round");
+
 // GLOBAL VARIABLES
 const elements = ["fire", "water", "air", "earth"]
 let playerScore = 0;
 let computerScore = 0;
 
+const elementButtons = elements.map(element => document.querySelector(`#${element}`));
 
 // -----REFACTORED CODE USING A FOR LOOP----
-for (let i = 0; i < elements.length; i++) {
-    const elButton = document.querySelector(`#${elements[i]}`);
-    elButton.addEventListener('click', () => {
-        let playerPlay = elements[i];
+// for (let i = 0; i < elements.length; i++) {
+//     const elButton = document.querySelector(`#${elements[i]}`);
+elementButtons.forEach(elementButton =>
+    elementButton.addEventListener('click', () => {
+        // let playerPlay = elements[i];
+        let playerPlay = elementButton.id;
         let computerPlay = computerSelection();
         decideWinner(playerPlay, computerPlay);
-        player.textContent = elements[i];
+        // player.textContent = elements[i];
+        player.textContent = playerPlay;
         computer.textContent = computerPlay;
         updateCounter();
+        checkWin();
     })
-};
+);
 
 function computerSelection() {
     return elements[Math.floor(Math.random() * elements.length)]
@@ -70,10 +77,19 @@ function updateCounter() {
     }
 }
 
+function checkWin() {
+    if (playerScore === winScore || computerScore === winScore) {
+        elementButtons.forEach(elementButton => elementButton.disabled = true)
+    }
+}
 
-winScoreSelect.addEventListener('change', () => {
-    winScore = parseInt(this.value);
+winScoreSelect.addEventListener('change', (e) => {
+    console.log(e);
+    winScore = parseInt(e.target.value);
 })
+
+
+
 
 resetButton.addEventListener('click', reset);
 
@@ -83,6 +99,7 @@ function reset() {
     computer.textContent = "";
     player.textContent = "";
     result.textContent = "";
+    elementButtons.forEach(elementButton => elementButton.disabled = false)
 }
 
 
