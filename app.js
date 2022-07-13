@@ -10,7 +10,7 @@ const cDisplay = document.querySelector("#compDisplay")
 // ---FOR THE ROUNDS AND RESET FUNCTION
 const resetButton = document.querySelector("#reset");
 const winScoreSelect = document.querySelector("#round");
-let winScore = 1;
+let winScore = 3;
 
 const select = document.querySelector("#round");
 
@@ -73,7 +73,7 @@ function updateCounter() {
     if (result.innerHTML === "You win the battle!") {
         playerScore += 1;
         pDisplay.textContent = playerScore;
-    } else {
+    } else if (result.innerHTML === "You lost the battle!") {
         computerScore += 1;
         cDisplay.textContent = computerScore;
     }
@@ -96,6 +96,8 @@ resetButton.addEventListener('click', reset);
 function reset() {
     pDisplay.textContent = 0;
     cDisplay.textContent = 0;
+    playerScore = 0;
+    computerScore = 0;
     computer.textContent = "";
     player.textContent = "";
     result.textContent = "";
