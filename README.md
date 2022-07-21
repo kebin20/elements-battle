@@ -17,6 +17,11 @@ Then, a for loop statement was used to create the 4 element button, which shows 
 
 Next step: 
 - Create a function for the counter element, so that everytime the player wins, the counter goes up by one, or if the computer wins, the computer counter goes up by one. 
-07/10/22 (COMPLETED)
+10/07/22 (COMPLETED)
 
-- Then, a round limit can be set. Once the player or computer reaches the amount of wins needed, the game stops. (Can add colour when the rounds reach it's maximum)
+- Then, a round limit can be set. Once the player or computer reaches the amount of wins needed, the game stops. (Can add colour when the rounds reach it's maximum) 13/10/22 (COMPLETED)
+
+21/07/22 CSS components has been added:
+- Used flexbox to lay out the elements centrally
+- Styled the element buttons
+- Use Google Fonts for the text

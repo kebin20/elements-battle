@@ -25,6 +25,7 @@ const elementButtons = elements.map(element => document.querySelector(`#${elemen
 // -----REFACTORED CODE USING A FOR LOOP----
 // for (let i = 0; i < elements.length; i++) {
 //     const elButton = document.querySelector(`#${elements[i]}`);
+
 // ---USED forEach FUNCTION---
 elementButtons.forEach(elementButton =>
     elementButton.addEventListener('click', () => {
