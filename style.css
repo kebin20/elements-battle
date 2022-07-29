@@ -11,6 +11,20 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.play {
+  width: 100px;
+  border: 5px solid rgb(4 225 254);
+  padding: 10px;
+  margin: 5px;
+}
+
+.comp {
+  width: 100px;
+  border: 5px solid green;
+  padding: 10px;
+  margin: 5px;
+}
+
 #fire {
   font-family: 'Quicksand', sans-serif;
   background: none;
@@ -97,7 +111,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  line-height: 180px;
+  line-height: 100px;
 }
 
 #results {
@@ -120,8 +134,44 @@ body {
   align-items: center;
 }
 
-#reset {
-  top: 30px;
-  left: 550px;
-  position: relative;
+.reset-button {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+
+@media (max-width: 900px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h4 {
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+
+  span#playerDisplay {
+    margin: 2em;
+  }
+
+  span#compDisplay {
+    margin: 2em;
+  }
+
+  div#btn-bar {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+  }
+
+  div#chooseRounds {
+    margin: 1.5em;
+  }
+
+  #btn-bar button {
+    margin: 0.5em;
+  }
 }
