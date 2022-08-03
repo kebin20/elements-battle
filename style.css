@@ -188,9 +188,10 @@ p {
 
 #chooseRounds {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin: 20px;
+  height: 80px;
 }
 
 #btn-bar button {
@@ -276,7 +277,22 @@ div#container1 {
   margin-left: 5px;
 }
 
-*:disabled {
+button {
+  border: 1px solid #0066cc;
+  background-color: #0099cc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+button:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+button:disabled,
+button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
