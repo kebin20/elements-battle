@@ -17,6 +17,7 @@ h2 {
   text-align: center;
   font-family: 'Gugi', cursive;
   font-size: 3em;
+  color: #7884f3;
 }
 
 h4 {
@@ -36,6 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Quicksand', sans-serif;
+  background-color: rgba(240, 166, 29, 0.309);
 }
 
 p {
@@ -80,7 +82,7 @@ p {
   display: flex;
   align-items: center;
   font-family: 'Quicksand', sans-serif;
-  background: none;
+  background: rgba(255, 255, 0, 0.381);
   color: rgb(255, 0, 0);
   border: 2px solid;
   border-radius: 50%;
@@ -97,8 +99,10 @@ p {
 }
 
 #water {
+  display: flex;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
-  background: none;
+  background: rgba(0, 255, 255, 0.405);
   color: blue;
   border: 2px solid;
   border-radius: 50%;
@@ -115,8 +119,10 @@ p {
 }
 
 #earth {
+  display: flex;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
-  background: none;
+  background: rgba(136, 27, 27, 0.354);
   color: brown;
   border: 2px solid;
   border-radius: 50%;
@@ -133,8 +139,10 @@ p {
 }
 
 #air {
+  display: flex;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
-  background: none;
+  background: rgba(4, 252, 252, 0.152);
   color: rgb(51, 194, 213);
   border: 2px solid;
   border-radius: 50%;
@@ -240,9 +248,40 @@ div#container1 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
-/* MAKE A RESPONSIVE PAGE FOR TABLETS */
+#water-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+#earth-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+#air-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+*:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 
 @media (max-width: 900px) {
   body {

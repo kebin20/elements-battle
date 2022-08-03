@@ -84,7 +84,7 @@ function checkWin() {
     if (playerScore === winScore || computerScore === winScore) {
         elementButtons.forEach(elementButton => {
             elementButton.disabled = true;
-            elementButton.classList.remove('#fire', '#water', '#earth', '#air');
+            elementButton.classList.add('*:disabled');
         })
     }
 }
