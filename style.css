@@ -1,3 +1,14 @@
+h3,
+span,
+p {
+  margin: auto;
+  line-height: 70px;
+  height: 60px;
+  text-align: center;
+  font-family: 'Gugi', cursive;
+  font-size: 1.5em;
+}
+
 h1,
 h2 {
   margin: auto;
@@ -5,10 +16,25 @@ h2 {
   height: 60px;
   text-align: center;
   font-family: 'Gugi', cursive;
-  font-size: 2em;
+  font-size: 3em;
 }
 
+h4 {
+  margin: auto;
+  line-height: 70px;
+  height: 60px;
+  text-align: center;
+  font-family: 'Gugi', cursive;
+  font-size: 1.5em;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -32,6 +58,9 @@ p {
 }
 
 .comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 20px;
   width: 100px;
   border: 5px solid rgb(240, 20, 20);
@@ -48,13 +77,14 @@ p {
 
 
 #fire {
+  display: flex;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
   background: none;
   color: rgb(255, 0, 0);
   border: 2px solid;
   border-radius: 50%;
   padding: 3em 3em 3em 3em;
-  font-size: 1em;
   transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
@@ -73,7 +103,6 @@ p {
   border: 2px solid;
   border-radius: 50%;
   padding: 3em 3em 3em 3em;
-  font-size: 1em;
   transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
@@ -92,7 +121,6 @@ p {
   border: 2px solid;
   border-radius: 50%;
   padding: 3em 3em 3em 3em;
-  font-size: 1em;
   transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
@@ -111,7 +139,6 @@ p {
   border: 2px solid;
   border-radius: 50%;
   padding: 3em 3em 3em 3em;
-  font-size: 1em;
   transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
@@ -132,7 +159,7 @@ p {
 
 #characters {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   line-height: 100px;
 }
@@ -146,22 +173,23 @@ p {
 
 #btn-bar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   line-height: 80px;
-  margin: 20px;
+  margin: 2em;
 }
 
 #chooseRounds {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: 20px;
 }
 
 #btn-bar button {
   height: 150px;
   width: 150px;
   font-size: 1em;
+  margin-left: 2em;
 }
 
 .reset-button {
@@ -170,12 +198,73 @@ p {
   margin: 3em;
 }
 
+span#computer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+span#player {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+span#playerDisplay {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+span#compDisplay {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+img {
+  margin-top: 30px;
+}
+
+div#rounds {
+  margin: 5px;
+}
+
+div#container1 {
+  margin-bottom: 10px;
+}
+
+.comp h3 {
+  margin-top: 30px;
+}
+
+#fire-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* MAKE A RESPONSIVE PAGE FOR TABLETS */
+
 @media (max-width: 900px) {
   body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    margin: auto;
+  }
+
+  div#characters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin: 110px;
+  }
+
+  div#rounds {
+    margin: 5px;
   }
 
   h4 {
@@ -184,11 +273,11 @@ p {
   }
 
   span#playerDisplay {
-    margin: 2em;
+    margin: 1em;
   }
 
   span#compDisplay {
-    margin: 2em;
+    margin: 1em;
   }
 
   div#btn-bar {
@@ -198,7 +287,11 @@ p {
   }
 
   div#chooseRounds {
-    margin: 1.5em;
+    margin: 1em;
+  }
+
+  .reset-button {
+    margin: 1em;
   }
 
   #btn-bar button {

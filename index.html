@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elements battle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +43,19 @@
 
     <div id="characters">
         <div class="comp">
-            <h3>Computer: </h3>
+            <figure class="image is-96x96">
+                <img src="icons/computer.png">
+            </figure>
+            <h3>Computer:</h3>
             <span id="computer"></span>
         </div>
+        <div>
+            VS
+        </div>
         <div class="play">
+            <figure class="image is-96x96">
+                <img src="icons/player.png">
+            </figure>
             <h3>Player: </h3>
             <span id="player"></span>
         </div>
@@ -57,14 +67,18 @@
     </div>
 
     <div id="btn-bar">
-        <button id="fire">Fire</button>
+        <button id="fire">
+            <figure id="fire-img" class="image is-96x96 ">
+                <img src="icons/fire.png">
+            </figure>
+        </button>
         <button id="water">Water</button>
         <button id="earth">Earth</button>
         <button id="air">Air</button>
     </div>
 
     <div class="reset-button">
-        <button id="reset">Reset</button>
+        <button class="button is-danger is-rounded is-medium is-responsive">Reset</button>
     </div>
 
     <script src="app.js"></script>
