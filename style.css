@@ -5,10 +5,15 @@ h2 {
   height: 60px;
   text-align: center;
   font-family: 'Gugi', cursive;
+  font-size: 2em;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+p {
+  margin: 30px;
 }
 
 .play {
@@ -122,6 +127,7 @@ body {
 #rounds {
   display: flex;
   justify-content: space-evenly;
+  margin: 30px;
 }
 
 #characters {
@@ -149,6 +155,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50px;
 }
 
 #btn-bar button {
