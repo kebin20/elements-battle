@@ -9,14 +9,13 @@ p {
   font-size: 1.5em;
 }
 
-h1,
-h2 {
+h1 {
   margin: auto;
   line-height: 70px;
   height: 60px;
   text-align: center;
   font-family: 'Gugi', cursive;
-  font-size: 3em;
+  font-size: 4em;
   color: #7884f3;
 }
 
@@ -48,11 +47,9 @@ p {
   font-size: 20px;
   width: 100px;
   border: 5px solid rgb(4 225 254);
-  padding: 10px;
-  margin: 5px;
   background: #a3e5eed0;
   color: black;
-  padding: 2em;
+  padding: 1em;
   border-radius: 30px;
   width: 100%;
   max-width: 220px;
@@ -64,15 +61,11 @@ p {
   flex-direction: column;
   align-items: center;
   font-size: 20px;
-  width: 100px;
   border: 5px solid rgb(240, 20, 20);
-  padding: 10px;
-  margin: 5px;
+  padding: 0.9em;
   background: #000000cb;
   color: white;
-  padding: 2em;
   border-radius: 30px;
-  width: 100%;
   max-width: 220px;
   margin: 1em;
 }
@@ -204,7 +197,7 @@ p {
 .reset-button {
   display: flex;
   justify-content: center;
-  margin: 3em;
+  margin: 1em;
 }
 
 span#computer {
@@ -239,6 +232,7 @@ div#rounds {
 
 div#container1 {
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .comp h3 {
@@ -291,8 +285,25 @@ button:hover {
   padding: 5px 10px;
 }
 
-button:disabled,
-button[disabled] {
+#fire:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#water:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#earth:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#air:disabled {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
@@ -309,9 +320,15 @@ button[disabled] {
     margin: auto;
   }
 
+  .play img {
+    margin-left: 30px;
+  }
+
   div#characters {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5px;
   }
 
   h2 {
@@ -341,8 +358,12 @@ button[disabled] {
     margin: 0.5em;
   }
 
+  div#container1 {
+    margin-top: 150px;
+  }
+
   div#chooseRounds {
-    margin: 1em;
+    margin: 0.5em;
   }
 
   .reset-button {

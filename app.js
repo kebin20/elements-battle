@@ -84,7 +84,6 @@ function checkWin() {
     if (playerScore === winScore || computerScore === winScore) {
         elementButtons.forEach(elementButton => {
             elementButton.disabled = true;
-            elementButton.classList.add('*:disabled');
         })
     }
 }
